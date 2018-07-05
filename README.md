@@ -2,7 +2,7 @@ tutum-docker-apache-php + Oracle OCI8 drivers
 =============================================
 
 Docker image based on tutum/apache-php with Oracle InstantClient OCI8
-driver
+driver Modify from  davidgaya/apache-php-oci
 
 License
 -------
@@ -19,7 +19,7 @@ Usage
 Start your image binding the external ports 80 in all interfaces to your
 container:
 
-    docker run -d -p 80:80 davidgaya/apache-php-oci
+    docker run -d -p 80:80 slee1005/php-oci-laravel-cas
 
 Test your deployment:
 
@@ -33,7 +33,7 @@ with this docker image,
 create a new `Dockerfile` in an empty folder with the following
 contents:
 
-    FROM davidgaya/apache-php-oci:latest
+    FROM slee1005/php-oci-laravel-cas:latest
     RUN rm -fr /app && git clone https://github.com/username/customapp.git /app
 
 replacing `https://github.com/username/customapp.git` with your
